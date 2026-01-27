@@ -1,15 +1,38 @@
 /* Page Basics */
 body {
-  background-color: #f2f2f2;   /* background color */
-  color: #333333;              /* text color */
+  background-color: #f2f2f2;
+  color: #333333;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Main Content */
-main {
-  padding: 20px;
+/* Navigation */
+nav {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #0077cc;
+  background-color: transparent;
+  padding: 6px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #e8f2ff;
 }
 
 /* Name at Top */
@@ -18,13 +41,13 @@ h1 {
   font-size: 32px;
   font-weight: bold;
   color: #1f3a5f;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 /* Sections */
 section {
   background-color: #ffffff;
-  margin-bottom: 20px;
+  margin: 20px;
   padding: 15px;
   border-radius: 5px;
 }
@@ -37,35 +60,53 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Experience List */
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
+/* -------- Experience (Flexbox layout) -------- */
+.experience-item {
   background-color: #e6e6e6;
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 12px;
   border-radius: 4px;
+  margin-bottom: 12px;
 }
 
-/* Connect Links */
+.experience-top {
+  display: flex;
+  justify-content: space-between; /* title left, date right */
+  align-items: baseline;
+  gap: 10px;
+}
+
+.experience-top h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-date {
+  font-size: 14px;
+  color: #555555;
+}
+
+.experience-item p {
+  margin: 8px 0 0 0; /* description below */
+}
+
+/* -------- Connect (Flexbox layout) -------- */
+.connect-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Button-like links (general) */
 a {
   color: #ffffff;
   background-color: #0077cc;
   text-decoration: none;
   padding: 6px 10px;
-  margin-right: 8px;
   border-radius: 4px;
   display: inline-block;
 }
 
 a:hover {
   background-color: #005fa3;
-}
-
-/* Alignment Example */
-#connect {
-  text-align: center;
 }
