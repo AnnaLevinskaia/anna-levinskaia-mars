@@ -42,6 +42,7 @@ for (let i = 0; i < skills.length; i++) {
 
     // Add li to ul
     skillsList.appendChild(skill);
+}
 
 
 // MESSAGE FORM SECTION
@@ -80,5 +81,3 @@ messageForm.addEventListener("submit", function (event) {
 
     event.target.reset();
 });
-
-}
