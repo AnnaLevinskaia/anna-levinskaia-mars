@@ -81,3 +81,30 @@ messageForm.addEventListener("submit", function (event) {
 
     event.target.reset();
 });
+
+// PROJECTS SECTION (Fetch GitHub Repos)
+
+const GITHUB_USERNAME = "AnnaLevinskaia";
+const GITHUB_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+fetch(GITHUB_URL)
+  .then((response) => response.json())
+  .then((data) => {
+    const repositories = data; // store response in variable named repositories
+    console.log("repositories:", repositories);
+
+    const projectSection = document.querySelector("#projects");
+    const projectList = projectSection.querySelector("ul");
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("li");
+      project.innerText = repositories[i].name;
+      projectList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    console.error("GitHub repos fetch error:", error);
+
+    const projectSection = document.querySelector("#projects");
+    projectSection.innerHTML += "<p>Sorry, projects could not be loaded right now.</p>";
+  });

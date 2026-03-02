@@ -70,6 +70,25 @@ section li {
   background-color: #005fa3;
 }
 
+/* Projects list layout (flexbox) */
+#projects ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#projects li {
+  background: #e9f2ff;
+  border: 1px solid #cfe2ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 0;          
+  word-break: break-word;    
+}
+
+
 /* TABLET STYLES */
 @media (max-width: 900px) {
 
